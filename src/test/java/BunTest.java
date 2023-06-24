@@ -1,18 +1,32 @@
-import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import praktikum.Bun;
+import static org.junit.Assert.assertEquals;
+
 
 public class BunTest {
-    private final Bun bun = new Bun("Test", 10);
+
+    // Создаем локальные переменные для ожидаемого результата
+    private final String TEST_NAME_BUN = "Метеорная булка";
+    private final float TEST_PRICE_BUN = 10.5f;
+
+    private Bun bun;
+
+    @Before
+    public void setUp() {
+        bun = new Bun(TEST_NAME_BUN, TEST_PRICE_BUN);
+    }
 
     @Test
     public void getNameReturnThisName() { // получить имя. Вернуть это имя
-        Assert.assertEquals(bun.name, bun.getName());
+        String actual = bun.getName();
+        assertEquals("В имени булки ошибка", TEST_NAME_BUN, actual);
     }
 
     @Test
     public void getPriceReturnThisPrice() { // получить цену. Вернуть эту цену
-        Assert.assertEquals(bun.price, bun.getPrice(), 0);
+        float actual = bun.getPrice();
+        assertEquals("В цене булки ошибка", TEST_PRICE_BUN, actual, 0);
     }
 
 }

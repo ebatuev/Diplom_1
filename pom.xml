@@ -9,8 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -19,7 +21,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
-            <scope>compile</scope>
+            <scope>test</scope>
         </dependency>
         <!-- Подключение Mockito -->
         <dependency>
@@ -28,11 +30,17 @@
             <version>3.12.4</version>
             <scope>test</scope>
         </dependency>
-        <!-- <dependency>
-             <groupId>net.bytebuddy</groupId>
-             <artifactId>byte-buddy</artifactId>
-             <version>1.14.2</version>
-         </dependency> -->
+        <!--<dependency>
+            <groupId>org.example</groupId>
+            <artifactId>praktikum</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency> -->
+        <!--<dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>1.14.2</version>
+        </dependency> -->
      </dependencies>
 
      <build>
